@@ -17,12 +17,28 @@ container{
 }
 
 .square{
-    border: 2px solid red;
     border-radius: 1rem;
+    display: flex;
+    text-align: center;
+    font-size: 3rem;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.square:hover{
-    filter: brightness(1.4);
-    outline: none;
+
+button{
+    margin-top: 1rem;
+    width:11rem;
+    padding:10px;
+    border-radius: .7rem;
+    background-color: lightgreen;
+}
+.sqaure:hover{
+    background-color: #353839;
 }
 
