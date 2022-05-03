@@ -8,8 +8,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="display" id="display"> Game</div>
-    <button id="restart">Restart</button>
+    <div class="setup">
+        <button id="X" class="btn btn-p x">X</button>
+        <div id="board" class="board">Player X's Turn</div>
+        <button id="O" class="btn btn-p o">O</button>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-content" >
+            <span class="close" > 
+                <div class="display" id="display"> Game</div>
+                <button id="restart">Restart</button>
+            </span>
+        </div>
+    </div>            
     <script src="app.js"></script>
 </body>
 </html>

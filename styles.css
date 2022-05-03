@@ -7,6 +7,20 @@ body{
     background-color: lightgray;
 }
 
+.setup{
+    display:flex;
+    justify-content: space-around;
+    padding:1rem;
+   
+}
+
+.player-one, .player-two{
+    border: 2px solid white;
+    padding:1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
 container{
     display:grid;
     grid-template-columns: repeat(3, 200px);
@@ -38,7 +52,28 @@ button{
     border-radius: .7rem;
     background-color: lightgreen;
 }
-.sqaure:hover{
-    background-color: #353839;
+button:hover{
+    background-color: lightblue;
 }
 
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0%;
+    top: 0%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 11rem; /* Could be more or less, depending on screen size */
+  }
