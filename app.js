@@ -8,7 +8,7 @@ const gameBoard = (() => {
         function createBoard(){
             for (let i = 0; i<9; i++){
                 const div = document.createElement('div')    
-                div.className = 'square'
+                div.className = 'square' 
                 container.appendChild(div);   
                 //bind Events
                 div.addEventListener('click',playerSelection, {once:true});
@@ -31,10 +31,19 @@ const gameBoard = (() => {
             }else if (previousClick === "O"){ 
                 board.textContent = "Player O's Turn"
                 e.target.textContent = "X";
-                previousClick = "X";       
+                previousClick = "X"; 
             } game.checkWin();     
-        }  
-    
+        } 
+        /* function computerSelection(e){
+            let computerMove = Math.floor(Math.random() * 9) + 1;
+            squares = document.querySelectorAll('.square')
+            if(previousClick === "X" && computerMove === 1){
+                
+            }
+
+
+        }
+     */
         return{
             playerSelection
         }
@@ -64,10 +73,10 @@ const game = (() => {
         {
             if (squares[currentCombos[1]].textContent === value && squares[currentCombos[2]].textContent === value)
             {
-                display.textContent = "We have a winner" + " " + previousClick; 
+                display.textContent = "Winner:" + " " + previousClick; 
                 board.textContent = ''        
             }else if(squares[currentCombos[1]].textContent !== value && squares[currentCombos[2]].textContent !== value && cellsClicked === 9) 
-                display.textContent = "Draw"
+                display.textContent = "It's a Tie"
         }displayControl.displayWinner();
     } 
     } 
@@ -85,7 +94,7 @@ const displayControl = (()=>{
       });
 
     function displayWinner(){
-        if (display.textContent === "We have a winner" + " " + previousClick || display.textContent === "Draw"){
+        if (display.textContent === "Winner:" + " " + previousClick || display.textContent === "It's a Tie"){
             modal.style.display = 'block'   
         }
     }
@@ -102,12 +111,11 @@ const playerFactory = (() => {
     //Bind Events
     btnO.addEventListener('click', (e) => {
         previousClick = 'X'
-        board.textContent = "Player O's Turn"
+        board.textContent = "Player O"
     })
     btnX.addEventListener('click', (e) => {
         previousClick = 'O'
-        board.textContent = "Player X's Turn"
+        board.textContent = "Player X"
     })
+
 })() 
-
-

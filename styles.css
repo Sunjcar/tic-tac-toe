@@ -21,13 +21,17 @@ body{
     cursor: pointer;
 }
 
+.board{
+    font-style: italic;
+    font-size: 3rem;
+}
+
 container{
     display:grid;
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3,200px);
-    border: 2px solid black;
     justify-content: center;
-    gap:10px;
+    gap:1rem;
 }
 
 .square{
@@ -40,10 +44,9 @@ container{
     border: 1px solid black;
     cursor: pointer;
     display:flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-
 
 button{
     margin-top: 1rem;
@@ -51,9 +54,7 @@ button{
     padding:10px;
     border-radius: .7rem;
     background-color: lightgreen;
-}
-button:hover{
-    background-color: lightblue;
+    cursor: pointer;
 }
 
 .modal {
@@ -75,5 +76,41 @@ button:hover{
     padding: 20px;
     border: 1px solid #888;
     border-radius: 10px;
-    width: 11rem; /* Could be more or less, depending on screen size */
+    width: 15rem; 
+    height:15rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
   }
+
+.display{
+    font-size: 3rem;
+    
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    gap: 10px;
+    margin-top:1rem;
+  }
+
+.fa-github {
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+    color: black;
+  }
+.fa-github:hover {
+    transform: rotate(720deg) scale(1.5);
+  }
+
+button:hover, .square:hover{
+    background-color: lightblue;
+}
